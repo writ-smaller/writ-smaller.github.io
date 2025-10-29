@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Writ Smaller</title>
+  <style>
+    :root { color-scheme: light dark; }
+
+    body {
+      font-family: 'Georgia', serif;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      background-color: #ffffff;
+      color: #111111;
+      transition: background-color 0.2s linear, color 0.2s linear;
+    }
+
+    /* Respect users who prefer less motion */
+    @media (prefers-reduced-motion: reduce) {
+      body { transition: none; }
+    }
+
+    /* Subtle, non-link affordance that adapts to theme colors */
+    .expandable {
+      border-bottom: 1px dotted currentColor;
+      cursor: pointer;
+    }
+
+    .hidden { display: none; }
+    article { margin-bottom: 3rem; }
+
+    /* Auto dark mode using the user's OS preference */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #0f0f0f;
+        color: #e7e7e7;
+      }
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>What if what you believe isn't the point?</h1>
+  </header>
+
+  <article>
+    <p>
+      The word <span class="expandable" data-target="#covenant">covenant</span> appears throughout scripture, but few stop to ask what it truly means. We treat it as a synonym for <em>promise</em> or <em>contract</em>, but what if it’s something deeper—something relational rather than transactional?
+    </p>
+
+    <div id="covenant" class="hidden">
+      <p>
+        In Hebrew, the word is <strong>berit</strong> (בְּרִית). It doesn’t merely describe an agreement; it marks a binding relationship, sealed often in blood, grounded not in law but in life. To break a covenant isn’t to break a rule—it’s to break trust.
+      </p>
+      <p>
+        So, when modern readers see <em>God’s covenant</em>, do they imagine a contract—or a kinship?
+      </p>
+    </div>
+  </article>
+
+  <noscript>
+    <p><strong>Note:</strong> This site uses small, optional enhancements when JavaScript is available, but it’s fully readable without it.</p>
+  </noscript>
+
+  
+  <script>
+    $(function() {
+      $('.expandable').on('click', function() {
+        const target = $(this).data('target');
+        $(target).slideToggle(250);
+      });
+    });
+  </script>
+</body>
+</html>
