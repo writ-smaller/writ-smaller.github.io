@@ -85,9 +85,9 @@ The blog uses:
 To run locally:
 
 ```bash
-# Clone the repository
-git clone https://github.com/writ-smaller/writ-smaller.github.io.git
-cd writ-smaller.github.io
+# Clone the repository (replace with your repo URL)
+git clone https://github.com/your-username/your-repo.git
+cd your-repo
 
 # Start a local server (Python 3)
 python3 -m http.server 8080
@@ -108,7 +108,7 @@ This blog is designed for GitHub Pages:
 4. Select branch: `main`, folder: `/ (root)`
 5. Save and wait for deployment
 
-Your blog will be available at: `https://writ-smaller.github.io/`
+Your blog will be available at: `https://your-username.github.io/your-repo/` (or `https://your-username.github.io/` if the repo is named `your-username.github.io`)
 
 ## Browser Support
 
