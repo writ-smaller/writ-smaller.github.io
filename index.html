@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writ Smaller - A Simple Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Writ Smaller</h1>
+            <p class="tagline">Writing small thoughts, one post at a time</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="#" data-page="home" class="active">Home</a></li>
+                <li><a href="#" data-page="about">About</a></li>
+                <li><a href="#" data-page="archive">Archive</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div id="content">
+            <!-- Blog posts will be loaded here dynamically -->
+            <div class="loading">Loading posts...</div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Writ Smaller. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="blog-data.js"></script>
+    <script src="blog.js"></script>
+</body>
+</html>
